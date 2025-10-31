@@ -1,0 +1,27 @@
+@use "sass:color";
+$base-color-1: rgb(232, 177, 25);
+$base-color-2: rgb(19, 93, 213);
+$base-color-3: rgb(19, 213, 168);
+
+
+@mixin createElement($color){
+   & div{
+      $i:9;
+      $x:30%;
+
+      @while $i > 0 {
+        @if($i == 5){
+          &:nth-child(#{$i}){
+            background-color: $color;
+          }
+        }@else{
+          &:nth-child(#{$i}){
+            background-color: color.adjust($color, $lightness: $x);
+            color: color.invert($color);
+          }
+        }
+        $x: $x - 5%;
+        $i: $i - 1;
+      }
+    }
+}
