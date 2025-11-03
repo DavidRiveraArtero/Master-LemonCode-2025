@@ -1,7 +1,8 @@
 @use "/style/reset.scss";
+@use "./style/variables.scss" as *;
 @use "sass:color";
-body{
 
+body{
   display: grid;
   grid-template-columns:  200px repeat(2, 1fr);
   grid-template-rows: 120px 1fr 70px;
@@ -38,7 +39,7 @@ header{
   }
 
   & div.page-title{
-    background-color: rgb(209, 203, 35);
+    background-color: $main_color;
     height: 100%;
     display: flex;
     align-items: center;
@@ -57,6 +58,7 @@ header{
   grid-area: main;
   display: grid;
   grid-template-columns: 300px 1fr;
+
   & nav {
     background-color: rgb(48, 180, 158);
     position: sticky;
@@ -134,6 +136,10 @@ header{
 }
 
 footer{
-  background-color: rgb(48, 180, 158);
+  background-color: $main_color;
   grid-area: footer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 20px;
 }
