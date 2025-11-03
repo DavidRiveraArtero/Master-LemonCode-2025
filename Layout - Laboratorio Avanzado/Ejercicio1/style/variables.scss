@@ -13,12 +13,11 @@ $base-color-3: rgb(19, 213, 168);
         @if($i == 5){
           &:nth-child(#{$i}){
             background-color: $color;
-            color: color.invert(color.adjust($color, $lightness: $x));
           }
         }@else{
           &:nth-child(#{$i}){
             background-color: color.adjust($color, $lightness: $x);
-            color: color.invert(color.adjust($color, $lightness: $x));
+            color: color.invert($color);
           }
         }
         $x: $x - 5%;

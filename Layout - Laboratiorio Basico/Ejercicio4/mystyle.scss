@@ -81,6 +81,11 @@ section {
             color: white;
             font-size: 20px;
             border: 0px;
+
+            &:hover{
+                cursor: pointer;
+                background-color: rgba(32, 139, 32, 0.864);
+            }
         }
     }
 

@@ -1,0 +1,139 @@
+@use "/style/reset.scss";
+@use "sass:color";
+body{
+
+  display: grid;
+  grid-template-columns:  200px repeat(2, 1fr);
+  grid-template-rows: 120px 1fr 70px;
+  grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+  @media (max-width: 768px){
+     grid-template-rows: 60px 1fr 70px;
+  }
+}
+
+header{
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0px;
+  
+  & div.toolbar{
+    background-color: white;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+
+    @media (max-width: 768px){
+      display: none;
+    }
+
+  }
+
+  & div.page-title{
+    background-color: rgb(209, 203, 35);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+
+}
+
+
+.page-container{
+  margin: 0;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  & nav {
+    background-color: rgb(48, 180, 158);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    & div.menu-container{
+      display: flex;
+      flex-direction: column;
+      & div.menu-title{
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        margin: 0% auto;
+        @media (max-width: 768px){
+          display: none;
+        }
+      }
+      & ul {
+        & li{
+          display: flex;
+          align-items: start;
+          padding: 20px;
+          background-color: rgb(243, 230, 179);
+          border-bottom: 1px solid black;
+          width: 100%;
+          @media (max-width: 768px){
+            justify-content: center;
+          }
+        } 
+        @media (max-width: 768px){
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+    @media (max-width: 768px){
+      height: 100%;
+    }
+  }
+
+  & main {
+    margin-top: 30px;
+    flex: 1;
+    & div.list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 35px;
+
+      & div.card {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        gap: 10px;
+        & img {
+          width: 50%;
+          height: 50%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px){
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr;
+  }
+}
+
+footer{
+  background-color: rgb(48, 180, 158);
+  grid-area: footer;
+}
