@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import { bundleStats } from "rollup-plugin-bundle-stats";
-
+import { compression } from "vite-plugin-compression2";
 import { checker } from "vite-plugin-checker";
 
 export default defineConfig({
@@ -9,10 +9,8 @@ export default defineConfig({
       typescript: true,
     }),
     bundleStats(),
+    compression({
+      algorithms: ["brotli", "gzip"],
+    }),
   ],
-  css: {
-    modules: {
-      globalModulePaths: [/global\.module\.css$/, /global\/.*\.module\.css$/],
-    },
-  },
 });
