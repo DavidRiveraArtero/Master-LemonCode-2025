@@ -6,3 +6,4 @@ import "./02-entregables/ejercicio-04.js";
 import "./02-entregables/ejercicio-05.js";
 import "./03-retos/reto-01.js";
 import "./03-retos/reto-02.js";
+import "./03-retos/reto-03.js";
