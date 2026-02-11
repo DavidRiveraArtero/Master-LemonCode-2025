@@ -32,12 +32,9 @@ class SlotMachine {
   }
 
   private generateResult(pull): void {
-    if (pull) {
-      console.log(`You won ${this.coins} coins!!`);
-      this.reset();
-    } else {
-      console.log("Good luck next time!!");
-    }
+    pull
+      ? [console.log(`You won ${this.coins} coins!!`), this.reset()]
+      : console.log("Good luck next time!!");
   }
 
   private reset(): void {
@@ -46,4 +43,8 @@ class SlotMachine {
 }
 
 const game = new SlotMachine();
+game.play();
+game.play();
+game.play();
+game.play();
 game.play();
