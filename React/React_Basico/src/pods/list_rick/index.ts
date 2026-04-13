@@ -1,0 +1,1 @@
+export * from "./rick_list.container"

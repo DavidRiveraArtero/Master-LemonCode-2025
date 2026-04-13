@@ -1,0 +1,58 @@
+.table_info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+        width: 70px;
+    }
+
+}
+
+.table-link{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(0, 128, 0, 0.728);
+    }
+}
+
+
+
+/*.card {
+    width: 250px;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.card-info button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+}
+
+.card-info button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 128, 0, 0.728);
+}
+
+.card img {
+    flex: 1;
+    aspect-ratio: 1/1;
+    border-radius: 5px 5px 0px 0px;
+}*/

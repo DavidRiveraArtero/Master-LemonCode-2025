@@ -1,0 +1,33 @@
+.card_container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20%;
+    min-width: 400px;
+
+    img{
+        width: 100%;
+    }
+
+    .card_container_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .card_container_info_p{
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            p:first-child {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .card_container_info_status {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            gap:2px
+        }
+    }
+}

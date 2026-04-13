@@ -1,0 +1,27 @@
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20%;
+    background-color: rgba(255, 255, 255, 0.609);
+    min-width: 400px;
+
+    .header_container_title{ 
+       font-weight: bold;
+    }
+
+    .header_container_links{
+        display: flex;
+        gap: 20px;
+        a {
+            padding: 5px;
+            background-color: #E20074;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            &:hover{
+                background-color: #bd0263ed;
+            }
+        }
+    }
+}
