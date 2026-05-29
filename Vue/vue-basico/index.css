@@ -1,0 +1,40 @@
+@font-face{
+  font-family: 'pizarra';
+  src: url('/fonts/KGTenThousandReasonsAlt.ttf') format('truetype');
+}
+
+:root {
+  --padding-md: 10px;
+  --padding-sm: 5px;
+  --gap-sm: 5px;
+  --gap-md: 10px;
+  --gap-xl: 20px;
+  --primary-color: white;
+  --secondary-color:black;
+  --pizzara-color: #434750;
+  --pizzara-color-secondary: #504c43;
+}
+
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: pizarra;
+  color: var(--primary-color);
+}
+ul{
+   list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: black; 
+}
+
+
+body{
+  background-color: var(--pizzara-color);
+
+}

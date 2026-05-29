@@ -1,0 +1,46 @@
+.form_container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    form {
+        width: 50%;
+        height: auto;
+        padding: var(--padding-md);
+        flex-direction: column;
+        background-color: var(--pizzara-color-secondary);
+        gap: var(--gap-xl);
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+    }
+
+    * {
+        color: black;
+    }
+
+    &_day {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-md);
+        width: 100%;
+
+        #day:hover {
+            cursor: pointer;
+        }
+    }
+
+    &_period {
+        display: flex;
+        gap: var(--gap-xl);
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+}

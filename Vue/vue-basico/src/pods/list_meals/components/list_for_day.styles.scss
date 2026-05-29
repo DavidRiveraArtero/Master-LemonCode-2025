@@ -1,0 +1,95 @@
+.list_for_day {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: var(--gap-md);
+
+    &_filter_header {
+        display: flex;
+        gap: var(--gap-md);
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 0.262);
+
+
+
+        &_btn_period {
+            display: flex;
+            gap: var(--gap-md);
+            position: relative;
+            padding: var(--padding-sm);
+
+
+            button {
+                color: black;
+                padding: var(--padding-sm);
+            }
+
+            .selected {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+
+
+                background-color: rgba(245, 19, 19, 0.208);
+            }
+        }
+
+
+
+        button {
+            padding: var(--padding-sm);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_meal {
+        min-width: 50%;
+        max-width: 100%;
+        width: 100%;
+        border-bottom: 2px solid white;
+        animation: 1s linear fadeIn;
+
+        button {
+            padding: var(--padding-md);
+            color: white;
+
+            background-color: var(--pizzara-color);
+            border: 0;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+
+            span {
+                font-size: 15px;
+                transition: transform 0.5s ease;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--pizzara-color-secondary);
+                align-items: center;
+
+                span {
+                    transform: translateX(25%);
+                }
+
+
+            }
+        }
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

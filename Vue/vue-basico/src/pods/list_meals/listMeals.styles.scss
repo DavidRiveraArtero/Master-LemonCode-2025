@@ -1,0 +1,75 @@
+.section_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+    max-width: 100%;
+    min-width: 35%;
+    margin-top: var(--padding-md);
+
+    @media (max-width:500px) {
+        justify-content: center;
+    }
+
+
+
+    &_day {
+        max-width: calc(100% / 8);
+        min-width: 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+
+        align-items: center;
+        padding: var(--padding-md);
+        gap: var(--gap-md);
+
+        &_title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid rgb(255, 255, 255);
+
+            h2 {
+                text-shadow:
+                    0 0 1px #884747,
+                    1px 1px 1px rgba(255, 255, 255, .4),
+                    -1px -1px 1px rgba(255, 255, 255, .2);
+
+                filter: blur(0.3px);
+                letter-spacing: 2px;
+            }
+        }
+
+
+
+        &_add_meal {
+            padding: var(--padding-md);
+            border: 1px solid white;
+            background-color: var(--pizzara-color);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 10px;
+            transition: all ease 0.5s;
+
+            span {
+                color: white;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--pizzara-color-secondary);
+            }
+        }
+
+        h3 {
+            letter-spacing: 3px;
+        }
+
+
+    }
+}
