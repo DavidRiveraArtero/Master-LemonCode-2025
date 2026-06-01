@@ -5,14 +5,14 @@
                 <button v-on:click="handleCleanFilter">Clean</button>
             </div>
             <div class="list_for_day_filter_header_btn_period">
-                <div class="selected"></div>
+             
                 <div>
                     <button v-on:click='handleFilterPeriod("lunch")'>☀️</button>
                     <button v-on:click='handleFilterPeriod("dinner")'>🌕</button>
                 </div>
             </div>
         </li>  
-        <li v-for="meal in meals" class="list_for_day_meal">
+        <li v-for="meal in mealList" class="list_for_day_meal">
             <button v-on:click="handleEditButton(meal)"><span>{{ meal.name }}</span></button>
         </li>
     </ul>
@@ -23,27 +23,32 @@
     import type { MealList } from '@/types';
     import { useRouter } from 'vue-router';
     import "./list_for_day.styles.scss"
-    import { onBeforeUpdate, onUpdated, ref } from 'vue';
+    import { ref, toRefs, watch } from 'vue';
 
 
-    const {meals} = defineProps<{meals:MealList[]}>()
-    const mealList = ref(meals)
-
+    const props = defineProps<{meals:MealList[]}>()
+    const {meals} = toRefs(props)
+    const mealList = ref([...meals.value])
     const router = useRouter()
+
+    watch(() => props.meals, (newMeal) => {
+        mealList.value = [...newMeal]
+    })
+
+    
   
     const handleEditButton = (meal:MealList):void => {
         router.push(`/meal/${meal.id}`)
     }
 
-    // MIRAR SI HAY ALGUNA FORMA DE NO REASIGNAR TODO EL RATO EL MEALS EN LA NUEVA LISTA
+    // Filtrar por periodo
     const handleFilterPeriod = (period:string) => {
-        
-        mealList.value = meals.filter((v) => v.mealPeriod?.toLocaleLowerCase() === period.toLocaleLowerCase())
+        mealList.value = meals.value.filter((v) => v.mealPeriod?.toLocaleLowerCase() === period.toLocaleLowerCase())
     }
 
     // LIMPIAR FILTRO
     const handleCleanFilter = () => {
-        mealList.value = meals 
+        mealList.value = [...meals.value] 
     }
 
 </script>

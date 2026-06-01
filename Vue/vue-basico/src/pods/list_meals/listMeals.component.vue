@@ -5,8 +5,7 @@
             <div class="section_container_day_title">
                 <h2 :style="{ color: getRandomColor() }">{{ dia }}</h2>
             </div>
-
-      
+            
             <List_for_dayComponent :meals="mealList.filter((meal) => meal.date == dia)"/>
        
             <button class="section_container_day_add_meal" v-on:click="handleCreateMeal(dia)"><span>Create Meal</span></button>
@@ -22,6 +21,8 @@
     import { useMealStore } from "@/stores/meal.store";
     import {getListMeal} from "./listMeals.container"
     import { useRouter } from "vue-router";
+
+    // STYLES
     import "./listMeals.styles.scss"
 
     let colorTitle: string[] = ["#d78a8a", "#378aa1", "#6920c2","#42ae3c","#768515","#b41240","#a42763"]
