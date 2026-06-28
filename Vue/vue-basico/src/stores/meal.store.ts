@@ -36,12 +36,16 @@ export const useMealStore = defineStore('mealStore', () => {
         mealList.value.splice(mealList.value.findIndex((meal) => meal.id === id), 1)
     }
 
+    const CleanList = () => {
+        mealList.value = []
+    }
+
     const filteredMeal = (period:string) => {
         return mealList.value.filter((meal) => meal.mealPeriod?.toLocaleLowerCase() === period.toLocaleLowerCase() )
     }
 
 
-    return {mealList, AddMeal, UpdateMeal, filteredMeal, DeleteMeal}
+    return {mealList, AddMeal, UpdateMeal, filteredMeal, DeleteMeal, CleanList}
 },{
     persist:{
         storage:sessionStorage,

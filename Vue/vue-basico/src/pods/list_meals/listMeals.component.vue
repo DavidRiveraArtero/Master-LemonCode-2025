@@ -1,14 +1,19 @@
 <template>
-    <section class="section_container">
-        <div class="section_container_day" v-for="dia in listaSemana">
 
-            <div class="section_container_day_title">
-                <h2 :style="{ color: getRandomColor() }">{{ dia }}</h2>
+    <section class="section_container">
+        <div class="section_container_header">
+            <button v-on:click="handleCleanList()" class="section_container_day_add_meal">Clean List</button>
+        </div>
+        <div class="section_container_days">
+            <div class="section_container_day" v-for="dia in listaSemana">
+                <div class="section_container_day_title">
+                    <h2 :style="{ color: getRandomColor() }">{{ dia }}</h2>
+                </div>
+                
+                <List_for_dayComponent :meals="mealList.filter((meal) => meal.date == dia)"/>
+        
+                <button class="section_container_day_add_meal" v-on:click="handleCreateMeal(dia)"><span>Create Meal</span></button>
             </div>
-            
-            <List_for_dayComponent :meals="mealList.filter((meal) => meal.date == dia)"/>
-       
-            <button class="section_container_day_add_meal" v-on:click="handleCreateMeal(dia)"><span>Create Meal</span></button>
         </div>
     </section>
 </template>
@@ -19,7 +24,7 @@
     
     // UTILITIS 
     import { useMealStore } from "@/stores/meal.store";
-    import {getListMeal} from "./listMeals.container"
+    import { getListMeal } from "./listMeals.container"
     import { useRouter } from "vue-router";
 
     // STYLES
@@ -44,6 +49,10 @@
 
         if(newMeal) router.push(`/meal/${newMeal.id}`)
         
+    }
+
+    const handleCleanList = () => {
+        mealStore.CleanList()
     }
 
     const getRandomColor = () => (colorTitle[Math.floor(Math.random() * colorTitle.length)])

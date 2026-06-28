@@ -1,17 +1,26 @@
 .section_container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
     flex-wrap: wrap;
     gap: var(--gap-md);
     max-width: 100%;
     min-width: 35%;
     margin-top: var(--padding-md);
 
-    @media (max-width:500px) {
-        justify-content: center;
+    &_header {
+        width: 10%;
     }
 
+    &_days {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
+        flex-wrap: wrap;
+        gap: var(--gap-md);
+
+    }
 
     &_day {
         max-width: calc(100% / 8);
