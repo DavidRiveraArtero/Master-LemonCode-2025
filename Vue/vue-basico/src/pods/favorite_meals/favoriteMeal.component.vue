@@ -32,7 +32,7 @@
     }
 
     const handleAddToList = (meal:MealList):void => {
-        mealStore.AddMeal(meal)
+        mealStore.AddMeal({...meal, favorite:false})
     }
 
 </script>

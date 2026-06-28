@@ -12,7 +12,11 @@ export const useFavoriteMealStore = defineStore('favoriteMealStore', () => {
     }
 
     const DeleteFavoriteMeal = (id:string):void => {
-        favoriteMealList.value.splice(favoriteMealList.value.findIndex((meal) => meal.id === id), 1)
+        const index = favoriteMealList.value.findIndex(meal => meal.id === id)
+        if(index !== -1 ){
+            favoriteMealList.value.splice(index, 1)
+
+        }
     }
 
 

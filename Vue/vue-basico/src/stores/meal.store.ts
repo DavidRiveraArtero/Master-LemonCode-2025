@@ -14,7 +14,7 @@ export const useMealStore = defineStore('mealStore', () => {
             id: crypto.randomUUID()
         }
         mealList.value.push(newMeal)
-      
+        
         return newMeal
     }
 
