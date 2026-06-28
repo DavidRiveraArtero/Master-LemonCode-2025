@@ -8,17 +8,25 @@
     &_filter_header {
         display: flex;
         gap: var(--gap-md);
+        padding: var(--padding-md);
         justify-content: space-between;
+        align-items: center;
         background-color: rgba(255, 255, 255, 0.262);
+        border-radius: var(--padding-md);
 
+        &_btn_clear {
+            display: flex;
+
+            button {
+                color: black;
+            }
+        }
 
 
         &_btn_period {
             display: flex;
             gap: var(--gap-md);
             position: relative;
-            padding: var(--padding-sm);
-
 
             button {
                 color: black;
@@ -27,8 +35,6 @@
 
 
         }
-
-
 
         button {
             padding: var(--padding-sm);
@@ -42,36 +48,76 @@
     &_meal {
         min-width: 50%;
         max-width: 100%;
-        width: 100%;
-        border-bottom: 2px solid white;
+        display: grid;
+        grid-template-columns: 60% 20% 20%;
+
         animation: 1s linear fadeIn;
 
-        button {
+        &_btn_edit {
             padding: var(--padding-md);
-            color: white;
-
             background-color: var(--pizzara-color);
-            border: 0;
             width: 100%;
+            height: 100%;
             display: flex;
             justify-content: start;
 
             span {
                 font-size: 15px;
                 transition: transform 0.5s ease;
+                display: flex;
+                align-items: center;
             }
 
             &:hover {
-                cursor: pointer;
                 background-color: var(--pizzara-color-secondary);
-                align-items: center;
 
                 span {
                     transform: translateX(25%);
                 }
+            }
+        }
 
+        &_btn_fav {
+            display: flex;
+            align-items: center;
+            background-color: var(--pizzara-color);
+            padding: 0%;
+
+            svg {
+                transition: all ease 0.5s;
+                fill: white;
+            }
+
+            &:hover {
+
+                svg {
+                    fill: red;
+
+                }
 
             }
+
+            .svg_isFav {
+                fill: red;
+                transition: all ease 0.5s;
+
+                &:hover {
+                    fill: white;
+                }
+            }
+        }
+
+
+        &_btn_delete {
+            padding: 0%;
+            background-color: var(--pizzara-color);
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+
         }
     }
 }

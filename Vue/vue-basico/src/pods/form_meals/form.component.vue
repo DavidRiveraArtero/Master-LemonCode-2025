@@ -1,14 +1,15 @@
 <template>
   <Teleport to="body">
       <div class="form_container">
-        <Transition name="modal" @after-leave="() => {}">
-          <form action=""  v-if="mealFind">
+        
+          <form action="" method="post" v-if="mealFind">
             <input type="text"
                   name="meal"
                   id="meal" 
                   placeholder="Text..."
                   v-if="mealFind"
                   v-model="mealFind.name"
+                  :required = true
             >
             <div class="form_container_day">
               <label for="">Select Day</label>
@@ -34,7 +35,7 @@
             </div>
             <button v-on:click="handleButtonAddMeal($event)">Add Meal</button>
           </form>
-        </Transition>
+
       </div>
   
     </Teleport>
@@ -71,11 +72,14 @@
   mealDate.value = mealFind.value?.date
 
   const handleButtonAddMeal = async(event:PointerEvent):Promise<void> => {
-      mealStore.UpdateMeal(mealId.value,{name:mealFind.value?.name === "" ? 
-        "ADD VALUE" 
-          : 
-        mealFind.value?.name, date:mealDate.value, mealPeriod: mealPeriod.value, favorite:false})
       event.preventDefault()
+      mealStore.UpdateMeal(mealId.value,
+      {
+        name:mealFind.value?.name === "" ? "ADD VALUE" 
+          : 
+        mealFind.value?.name, date:mealDate.value, mealPeriod: mealPeriod.value
+      })
+    
       mealName.value = ""
       router.push("/")
   }

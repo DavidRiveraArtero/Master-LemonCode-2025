@@ -34,7 +34,7 @@
 
     // BUTTON FOR CREATE A NEW MEAL
     const handleCreateMeal = async (day:string) => {
-        const newMeal = await mealStore.AddMeal(
+        const newMeal = mealStore.AddMeal(
             {
                 name:"New Meal", 
                 date:day, 

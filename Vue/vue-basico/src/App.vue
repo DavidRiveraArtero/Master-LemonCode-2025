@@ -1,6 +1,7 @@
 
 
 <template>
+  <Header/>
   <main>
     <RouterView/>
   </main>
@@ -8,12 +9,13 @@
 
 <script setup lang="ts">
   import { RouterView } from 'vue-router';
+import Header from './views/Header.vue';
 </script>
 
 <style lang="css" scoped>
-    main{
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-    }
+  main{
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-lg);
+  }
 </style>

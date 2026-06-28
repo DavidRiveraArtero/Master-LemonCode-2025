@@ -4,6 +4,7 @@
 }
 
 :root {
+  --padding-lg: 15px;
   --padding-md: 10px;
   --padding-sm: 5px;
   --gap-sm: 5px;
@@ -12,6 +13,7 @@
   --primary-color: white;
   --secondary-color:black;
   --pizzara-color: #434750;
+  --pizzara-color-black: #333741;
   --pizzara-color-secondary: #504c43;
 }
 
@@ -37,4 +39,12 @@ a{
 body{
   background-color: var(--pizzara-color);
 
+}
+
+button{
+  border: 0;
+  padding: var(--padding-md);
+  &:hover{
+    cursor: pointer;
+  }
 }

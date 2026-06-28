@@ -20,9 +20,8 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        border-left: 2px solid white;
-        border-right: 2px solid white;
-
+        border-radius: var(--padding-md);
+        background-color: var(--pizzara-color-black);
         align-items: center;
         padding: var(--padding-md);
         gap: var(--gap-md);
@@ -47,7 +46,6 @@
 
 
         &_add_meal {
-            padding: var(--padding-md);
             border: 1px solid white;
             background-color: var(--pizzara-color);
             display: flex;
@@ -55,6 +53,7 @@
             width: 100%;
             margin: 10px;
             transition: all ease 0.5s;
+            border-radius: var(--padding-md);
 
             span {
                 color: white;

@@ -3,5 +3,5 @@ export interface MealList{
     name?:string
     date?:string
     mealPeriod?: string
-    favorite: boolean
+    favorite?: boolean
 }  
