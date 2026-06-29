@@ -2,8 +2,9 @@
 
     <section class="section_container">
         <div class="section_container_header">
-            <Button title="Clean List" :func="() => handlePopUp()" />
-               
+            <div class="section_container_header_option">
+                <Button title="Clean List" :func="() => handlePopUp()" />
+            </div>
         </div>
         <PopUp 
             :show="showPopup" 

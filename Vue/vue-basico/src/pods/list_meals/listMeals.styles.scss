@@ -1,7 +1,6 @@
 .section_container {
     display: flex;
     flex-direction: column;
-
     flex-wrap: wrap;
     gap: var(--gap-md);
     max-width: 100%;
@@ -9,7 +8,19 @@
     margin-top: var(--padding-md);
 
     &_header {
-        width: 10%;
+        width: 100%;
+
+        display: flex;
+
+        @media (max-width: 450px) {
+            justify-content: center;
+        }
+
+        &_option {
+            min-width: 231px;
+            display: flex;
+
+        }
     }
 
     &_days {
@@ -20,6 +31,9 @@
         flex-wrap: wrap;
         gap: var(--gap-md);
 
+        @media (max-width: 450px) {
+            justify-content: center;
+        }
     }
 
     &_day {

@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
   import { RouterView } from 'vue-router';
-import Header from './views/Header.vue';
+  import Header from './views/Header.vue';
 </script>
 
 <style lang="css" scoped>
