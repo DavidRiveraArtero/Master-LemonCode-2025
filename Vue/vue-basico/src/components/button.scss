@@ -1,0 +1,19 @@
+.default_button {
+    border: 1px solid white;
+    background-color: var(--pizarra-color);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    transition: all ease 0.5s;
+    border-radius: var(--padding-md);
+
+    span {
+        color: white;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--pizarra-color-secondary);
+    }
+}

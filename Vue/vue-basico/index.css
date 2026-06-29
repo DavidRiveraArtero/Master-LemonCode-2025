@@ -12,9 +12,9 @@
   --gap-xl: 20px;
   --primary-color: white;
   --secondary-color:black;
-  --pizzara-color: #434750;
-  --pizzara-color-black: #333741;
-  --pizzara-color-secondary: #504c43;
+  --pizarra-color: #434750;
+  --pizarra-color-black: #333741;
+  --pizarra-color-secondary: #504c43;
 }
 
 
@@ -37,7 +37,7 @@ a{
 
 
 body{
-  background-color: var(--pizzara-color);
+  background-color: var(--pizarra-color);
 
 }
 

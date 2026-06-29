@@ -5,8 +5,8 @@
         <div v-for="meal in favoriteMeals" class="favorite_container_meal">
             <h3>{{ meal.name }}</h3>
             <div class="favorite_container_meal_options">
-                <button v-on:click="handleAddToList(meal)" class="section_container_day_add_meal">Add to List</button>
-                <button v-on:click="handleDeleteFavorite(meal)" class="section_container_day_add_meal">Delete</button>
+                <Button title="Delete" :func="() => handleDeleteFavorite(meal)"/>
+                <Button title="Add to List" :func="() => handleAddToList(meal)" />
             </div>
         </div>
     </div>
@@ -14,13 +14,18 @@
 </template>
 
 <script lang="ts" setup>
+    // COMPONENTS
+    import Button from '@/components/button.vue';
+
+    // STORE
     import { useFavoriteMealStore } from '@/stores/favorite.store';
-    import { ref } from 'vue';
     import { useMealStore } from '@/stores/meal.store';
     import type { MealList } from '@/types';
 
+    // STYLES
     import "./favoriteMeal.styles.scss"
-
+    // UTILITIES
+    import { ref } from 'vue';
 
     const favoriteMealStore = useFavoriteMealStore()
     const mealStore = useMealStore()

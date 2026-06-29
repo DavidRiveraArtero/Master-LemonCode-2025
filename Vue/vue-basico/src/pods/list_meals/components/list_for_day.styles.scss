@@ -55,7 +55,7 @@
 
         &_btn_edit {
             padding: var(--padding-md);
-            background-color: var(--pizzara-color);
+            background-color: var(--pizarra-color);
             width: 100%;
             height: 100%;
             display: flex;
@@ -69,7 +69,7 @@
             }
 
             &:hover {
-                background-color: var(--pizzara-color-secondary);
+                background-color: var(--pizarra-color-secondary);
 
                 span {
                     transform: translateX(25%);
@@ -80,7 +80,7 @@
         &_btn_fav {
             display: flex;
             align-items: center;
-            background-color: var(--pizzara-color);
+            background-color: var(--pizarra-color);
             padding: 0%;
 
             svg {
@@ -110,7 +110,7 @@
 
         &_btn_delete {
             padding: 0%;
-            background-color: var(--pizzara-color);
+            background-color: var(--pizarra-color);
 
             img {
                 width: 100%;

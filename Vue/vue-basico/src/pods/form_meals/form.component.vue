@@ -44,10 +44,12 @@
 <script setup lang="ts">
   //import {handleButtonAddMeal, mealFind ,mealPeriod} from "./form.container"
 
+  // STYLES
   import "./form.styles.scss"
-
-  import { computed, ref } from "vue";
+  // STORE
   import { useMealStore } from '@/stores/meal.store';
+  // UTILITIES 
+  import { computed, ref } from "vue";
   import { useRoute, useRouter } from "vue-router";
 
   let mealName = ref("New Meal")

@@ -34,12 +34,16 @@
 </template>
 
 <script setup lang="ts">
-
-    import type { MealList } from '@/types';
-    import { useRouter } from 'vue-router';
+    // STYLES
     import "./list_for_day.styles.scss"
-    import { ref, toRefs, watch } from 'vue';
+
+    // STORE
+    import type { MealList } from '@/types';
     import { useMealStore } from '@/stores/meal.store';
+
+    // UTILITIES 
+    import { useRouter } from 'vue-router';    
+    import { ref, toRefs, watch } from 'vue';
 
 
     const props = defineProps<{meals:MealList[]}>()

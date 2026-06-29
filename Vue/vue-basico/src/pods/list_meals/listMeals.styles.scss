@@ -30,7 +30,7 @@
         flex-direction: column;
         height: 100%;
         border-radius: var(--padding-md);
-        background-color: var(--pizzara-color-black);
+        background-color: var(--pizarra-color-black);
         align-items: center;
         padding: var(--padding-md);
         gap: var(--gap-md);
@@ -49,28 +49,6 @@
 
                 filter: blur(0.3px);
                 letter-spacing: 2px;
-            }
-        }
-
-
-
-        &_add_meal {
-            border: 1px solid white;
-            background-color: var(--pizzara-color);
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin: 10px;
-            transition: all ease 0.5s;
-            border-radius: var(--padding-md);
-
-            span {
-                color: white;
-            }
-
-            &:hover {
-                cursor: pointer;
-                background-color: var(--pizzara-color-secondary);
             }
         }
 

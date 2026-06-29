@@ -1,0 +1,31 @@
+.pop-up {
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(6px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &_container {
+        padding: var(--padding-md);
+        border-radius: var(--padding-md);
+
+        h3 {
+            color: black;
+        }
+
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        &_options {
+            display: flex;
+        }
+    }
+}
