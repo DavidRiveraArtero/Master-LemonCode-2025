@@ -1,7 +1,7 @@
 <template>
   <Teleport to="body">
+
       <div class="form_container">
-        
           <form action="" method="post" v-if="mealFind">
             <input type="text"
                   name="meal"
@@ -61,13 +61,13 @@
   const router = useRouter()
   /* 
     CUANDO ESTA EN EL FICHERO FORM.CONTAINER.TS 
-    UNDEFINDER MIRAR COMO HACER QUE SE CARGUE BIEN 
+    SALE UNDEFINED MIRAR COMO HACER QUE SE CARGUE BIEN 
   */
   const mealId = computed(() => route.params.id as string)
 
   /*
     CUANDO ESTA EN EL FICHERO FORM.CONTAINER.TS 
-    SIMPRE REGRESA UNDIFINDE PORQUE EL `mealId` no carga bien el id del router 
+    SIMPRE REGRESA UNDEFINED PORQUE EL `mealId` no carga bien el id del router 
 
   */
   const mealFind = computed(() => mealStore.mealList.find((mealList) => mealList.id === mealId.value))
@@ -87,26 +87,3 @@
   }
 </script>
 
-<!--MIRAR PORQUE NO FUNCIONA EL TRANSITION-->
-<style scoped>
-.modal-enter-active,
-.modal-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.modal-enter-from,
-.modal-leave-to {
-  opacity: 0;
-}
-
-.modal-enter-active > div,
-.modal-leave-active > div {
-  transition: transform 0.2s ease;
-}
-
-.modal-enter-from > div,
-.modal-leave-to > div {
-  transform: scale(0.95);
-}
-
-</style>
