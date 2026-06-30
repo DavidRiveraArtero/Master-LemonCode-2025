@@ -83,7 +83,8 @@
       })
     
       mealName.value = ""
-      router.push("/")
+      router.push("/") 
+      
   }
 </script>
 
