@@ -1,0 +1,71 @@
+.card_collection {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    gap: 5px;
+    max-width: 300px;
+    min-width: 300px;
+    flex: 1;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+
+        &_header {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+
+                span {
+                    border-radius: 50%;
+                    display: inline-block
+                }
+
+                .isAlive {
+                    animation: pulse-bg-green 1.5s infinite ease-in-out;
+                }
+
+                .isNotAlive {
+                    animation: pulse-bg-red 1.5s infinite ease-in-out;
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes pulse-bg-green {
+
+    0%,
+    100% {
+        background-color: #ffffff;
+    }
+
+    50% {
+        background-color: #64cf49; // Cambia a un tono del color deseado
+    }
+}
+
+@keyframes pulse-bg-red {
+
+    0%,
+    100% {
+        background-color: #ffffff;
+    }
+
+    50% {
+        background-color: #ca1818; // Cambia a un tono del color deseado
+    }
+}
