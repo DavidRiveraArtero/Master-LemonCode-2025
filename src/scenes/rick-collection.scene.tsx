@@ -1,9 +1,12 @@
 import * as React from 'react';
-import { AppLayout } from '#layouts';
-import { RickCollectionContainer } from '#pods/rick-collection';
-
+import { AppLayout, CenteredLayout } from '#/layouts';
+import { RickCollectionContainer } from '#/pods/rick-collection';
+import { Outlet } from 'react-router-dom';
 export const RickCollectionScene = () => (
-  <AppLayout>
-    <RickCollectionContainer />
-  </AppLayout>
+  <>
+    <AppLayout>
+        <Outlet/>
+        <RickCollectionContainer />
+    </AppLayout>
+  </>
 );
