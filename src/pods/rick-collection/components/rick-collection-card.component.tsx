@@ -1,6 +1,8 @@
 import React, {FC} from "react";
 import { Result } from "../api";
 import "./rick-collection-card.compoment.style.scss"
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 interface Props {
     character: Result
@@ -17,9 +19,7 @@ export const RickCollectionCard:FC<Props> = ({character}) => {
                 <div className="card_collection_info_header">
                     <div>
                         <h3>{character.name}</h3>
-                        <span className={character.status === 'Alive' ? 'isAlive' : 'isNotAlive'}>
-                            {character.status === 'Alive' ? '🟢' : '🔴' }
-                        </span>
+                        <div className={character.status === 'Alive' ? 'isAlive' : 'isNotAlive'}/>
                     </div>
                     <p>{character.origin.name}</p>
                 </div>
@@ -29,7 +29,7 @@ export const RickCollectionCard:FC<Props> = ({character}) => {
                     </div>
                     <p>{character.episode.length}</p>
                 </div>
-                <button>INFO</button>
+                <Button component={Link} to={`/rick/${character.id}`} variant="contained">Info</Button>
            
             </div>
         </div>

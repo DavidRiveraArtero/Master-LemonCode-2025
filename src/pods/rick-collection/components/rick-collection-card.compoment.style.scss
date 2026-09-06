@@ -17,6 +17,7 @@
     &_info {
         display: flex;
         flex-direction: column;
+        padding: 0px 7px 7px 7px;
 
         &_header {
             display: flex;
@@ -28,20 +29,26 @@
                 gap: 10px;
 
 
-                span {
+                div {
                     border-radius: 50%;
-                    display: inline-block
+                    display: inline-block;
+
+                    width: 20px;
+                    height: 20px;
                 }
 
                 .isAlive {
                     animation: pulse-bg-green 1.5s infinite ease-in-out;
+                    border: 1px solid #64cf49;
                 }
 
                 .isNotAlive {
                     animation: pulse-bg-red 1.5s infinite ease-in-out;
+                    border: 1px solid #ca1818;
                 }
             }
         }
+
     }
 
 }

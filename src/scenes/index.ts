@@ -1,2 +1,2 @@
 export * from './rick-collection.scene';
-export * from './hotel.scene';
+export * from './rick-character.scene';

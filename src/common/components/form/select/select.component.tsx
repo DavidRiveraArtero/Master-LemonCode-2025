@@ -8,7 +8,7 @@ import {
   MenuItem,
   FormHelperText,
 } from '@mui/material';
-import { Lookup } from '#common/models';
+import { Lookup } from '#/common/models';
 import * as classes from './select.styles';
 
 type Props = SelectProps & {

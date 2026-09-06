@@ -11,7 +11,7 @@ export const RickCollection:FC<Props> = ({rickCollection}) => {
         <section className="rick-collection">
             {rickCollection.map((character) => {
                 return (
-                    <RickCollectionCard character={character}/>
+                    <RickCollectionCard character={character} key={character.name}/>
                 )
             })}
         </section>
