@@ -38,13 +38,14 @@
                 }
 
                 .isAlive {
-                    animation: pulse-bg-green 1.5s infinite ease-in-out;
-                    border: 1px solid #64cf49;
+                    animation: pulse-bg-green 2s infinite ease-in-out;
+
+                    background-color: #64cf49;
                 }
 
                 .isNotAlive {
-                    animation: pulse-bg-red 1.5s infinite ease-in-out;
-                    border: 1px solid #ca1818;
+                    animation: pulse-bg 2s infinite ease-in-out;
+                    background-color: #ca1818;
                 }
             }
         }
@@ -53,26 +54,16 @@
 
 }
 
-@keyframes pulse-bg-green {
+@keyframes pulse-bg {
 
     0%,
     100% {
-        background-color: #ffffff;
+
+        filter: blur(0px);
     }
 
     50% {
-        background-color: #64cf49; // Cambia a un tono del color deseado
-    }
-}
+        filter: blur(1px);
 
-@keyframes pulse-bg-red {
-
-    0%,
-    100% {
-        background-color: #ffffff;
-    }
-
-    50% {
-        background-color: #ca1818; // Cambia a un tono del color deseado
     }
 }
