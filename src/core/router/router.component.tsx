@@ -10,19 +10,17 @@ export const RouterComponent: React.FunctionComponent = () => {
       <Routes>
 
         <Route
-          path={switchRoutes.rickCollection}
-          element={<RickCollectionScene />}
-        >
-        <Route
-            path=":id"
-            element={<RickCharacterScene />}
-          />
+        path={switchRoutes.rickCollection}
+        element={<RickCollectionScene />}>
+          <Route
+              path={switchRoutes.rickCharacter}
+              element={<RickCharacterScene />}
+            />
         </Route>
 
         <Route
           path={switchRoutes.root}
-          element={<Navigate to={switchRoutes.rickCollection} />}
-        />
+          element={<Navigate to={switchRoutes.rickCollection} />}/>
 
       </Routes>
     </HashRouter>

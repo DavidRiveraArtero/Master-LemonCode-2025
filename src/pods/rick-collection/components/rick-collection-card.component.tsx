@@ -17,15 +17,16 @@ export const RickCollectionCard:FC<Props> = ({character}) => {
         
             <div className="card_collection_info">
                 <div className="card_collection_info_header">
-                    <div>
-                        <h3>{character.name}</h3>
+                    <div className="card_collection_info_header_info">
+                        <h2>{character.name}</h2>
                         <div className={character.status === 'Alive' ? 'isAlive' : 'isNotAlive'}/>
                     </div>
-                    <p>{character.origin.name}</p>
+                    <p className="card_collection_info_header_origin">{character.species}</p>
                 </div>
                 <div>
-                    <div>  
-                        <p>{character.species}</p>
+                    <div> 
+                        Last known location: 
+                        <p>{character.origin.name}</p>
                     </div>
                     <p>{character.episode.length}</p>
                 </div>
